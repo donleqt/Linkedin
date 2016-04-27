@@ -1,0 +1,92 @@
+{
+  "personName" : "Don Le",
+  "mainJob" : "Front-end Developer",
+  "country" : "Vietnam",
+
+  "experience": [
+
+      {
+        "companyName": "MimosaTek",
+        "position": "Front-end Dev",
+        "period" : "April 2016 - Present",
+        "location" : "Ho Chi Minh City",
+        "avatar": "https://mimosatek.com/img/logos/logo.png"
+      },
+
+      {
+        "companyName": "TMA Solution",
+        "position": "Front-end Dev",
+        "period" : "April 2016 - Present",
+        "location" : "Ho Chi Minh City",
+        "avatar" : "http://hcm.ptit.edu.vn/uploads/2011/11/tma.jpg"
+
+      }
+  ],
+
+  "education": [
+    {
+      "schoolName": "University of Science",
+      "major": "Software engineering",
+      "period" : "2013 - Present",
+      "location" : "Ho Chi Minh City"
+    },
+    {
+      "schoolName": "Trieu Phong high school of Quang Tri",
+      "major": "10A3",
+      "period" : "2010 - 2013",
+      "location" : "Quang Tri"
+    }
+  ],
+
+  "project" : [
+    {
+      "name" : "Hueinfo travel infomation app",
+      "link" : "https://play.google.com/store/apps/details?id=com.stcd.hueinfo"
+    },
+    {
+      "name" : "Karaoke room mannagement",
+      "link" : "http://sharecode.vn/source-code/phan-mem-quan-ly-quan-karaoke-bao-cao-1406.htm"
+    }
+  ],
+
+  "skill" : [
+    {
+      "name": "C/C++",
+      "type" : 1,
+      "level" : 3
+    },
+    {
+      "name": "C# - .Net",
+      "type" : 1,
+      "level" : 4
+    },
+    {
+      "name": "JavaScript/NodeJs",
+      "type" : 1,
+      "level" : 4
+    },
+    {
+      "name": "Android dev",
+      "type" : 1,
+      "level" : 3
+    },
+    {
+      "name": "Ruby on Rail",
+      "type" : 2,
+      "level" : 3
+    },
+    {
+      "name": "Java",
+      "type" : 2,
+      "level" : 3
+    },
+    {
+      "name": "C/C++",
+      "type" : 2,
+      "level" : 3
+    }
+  ],
+  "summary" : "I'm interesting in Web technology and want to developer my career as a web developer. Always eager to learn form anyone, anywhere. For me, you only reach happiness when you are good at something, so keep learning, keep trainning !"
+
+
+}
