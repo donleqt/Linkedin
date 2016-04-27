@@ -3,7 +3,9 @@
 }
 
 body {
-    background: url("../images/bg3.jpg");
+    background: url("../images/background-7.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 .top-card {
@@ -69,6 +71,9 @@ body {
     display: inline-block;
 }
 
+.child-section >   .section-header > i {
+        vertical-align: sub;
+}
 
 .child-section >   .section-header > *:last-child{
     padding-left:10px;

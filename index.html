@@ -23,10 +23,9 @@
                         <h3>{{data.personName}}</h3>
                         <h4>{{data.mainJob}}</h4>
                         <h6 style="margin-bottom: 20px">{{data.country}}</h6>
-                        <h6>Current <span>LinkedIn, Intuit, DonorsChoose</span></h6>
-                        <h6>Previous <span>Malaria No More, Accel Partners, Greylock</span></h6>
-                        <h6>Education <span>University of Pennsylvania - The Wharton School</span></h6>
-
+                        <h6>Current <span>{{data.current}}</span></h6>
+                        <h6>Education <span>{{data.edu}}</span></h6>
+                        <a class="btn btn-info" style="margin-top: 20px" href="mail:donleqt@gmail.com">Email me</a>
                 </div>
             </div>
 
@@ -44,7 +43,8 @@
                     <!--Summary section-->
                     <div class="child-section">
                         <div class="section-header">
-                            <img>
+                            <i class="fa fa-2x fa-user"></i>
+                            <i class="fa fa-2x fa-no"></i>
                             <h4 class="less-color">Summary</h4>
                         </div>
                         <div class="content">
@@ -54,7 +54,7 @@
                     <!--Experience-->
                     <div class="child-section">
                         <div class="section-header">
-                            <img>
+                            <i class="fa fa-2x fa-briefcase"></i>
                             <h4 class="less-color">Experience</h4>
                         </div>
                         <div class="content">
@@ -74,7 +74,7 @@
                     <!--Projects-->
                     <div class="child-section">
                         <div class="section-header">
-                            <img>
+                            <i class="fa fa-2x fa-folder"></i>
                             <h4 class="less-color">Projects</h4>
                         </div>
                         <ul class="project-list">
@@ -86,7 +86,7 @@
                     <!--Skills-->
                     <div class="child-section">
                         <div class="section-header">
-                            <img>
+                            <i class="fa fa-2x fa-rocket"></i>
                             <h4 class="less-color">Skills</h4>
                         </div>
                         <div class="content">
@@ -94,7 +94,7 @@
                             <ul class="top-skill-board">
                                 <li ng-repeat="skill in data.skill | orderBy: 'level'" ng-if="skill.type==1" class="skill-pill"><span>{{skill.level}}</span><span>{{skill.name}}</span></li>
                             </ul>
-                            <h5 style="padding: 15px 0">Don also know about...</h5>
+                            <h5 style="padding: 15px 0">I also know about...</h5>
                             <ul class="more-skills">
                                 <li ng-repeat="skill in data.skill | orderBy: 'level'" ng-if="skill.type==2" class="skill-pill"><span>{{skill.level}}</span><span>{{skill.name}}</span></li>
                             </ul>
@@ -105,7 +105,7 @@
                     <!--Education-->
                     <div class="child-section">
                         <div class="section-header">
-                            <img>
+                            <i class="fa fa-2x fa-mortar-board"></i>
                             <h4 class="less-color">Education</h4>
                         </div>
 
