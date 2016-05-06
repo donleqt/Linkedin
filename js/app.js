@@ -34,7 +34,9 @@
             $scope.params=params;
             $scope.saveChange=saveFunction;
         };
-
+        $scope.changePicture = function () {
+            
+        };
 
         $scope.editBaseInfo = function () {
            if ($scope.editMode==false)
@@ -188,7 +190,7 @@
                     obj: 'name'
                 },
                 {
-                    name: 'Type',
+                    name: 'Type (1 or 2)',
                     obj: 'type'
                 },
                 {

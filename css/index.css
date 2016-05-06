@@ -228,3 +228,8 @@ li i.fa:not(:first-child) {
     /*padding-left: 10px;*/
 
 }
+
+.modal-header {
+    background-color: #387DB9;
+    color: #ffffff;
+}

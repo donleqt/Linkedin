@@ -19,7 +19,7 @@
         <div class="row">
             <div class="top-card">
 
-                <div class="profile-picture" ng-class="{'hover-style':editMode}" ng-click="editEnable([{name:'Avatar URL',obj:'avatar'}])">
+                <div class="profile-picture" ng-class="{'hover-style':editMode}" ng-click="editEnable([{name:'Avatar URL',obj:'avatar'}],saveChange)">
                     <img ng-src="{{data.avatar}}" style="">
                 </div>
                 <div class="headline-info" ng-class="{'hover-style':editMode}" ng-click="editBaseInfo()">
@@ -31,8 +31,8 @@
                         <h6>Education <span>{{data.edu}}</span></h6>
                         <a class="btn btn-info" style="margin-top: 15px" href="mail:{{data.email}}">Email me</a>
                 </div>
-                <div class="hover-style" ng-if="!editMode" ng-click="editModeToggle()" style="position: absolute;right: 15px;top:10px;opacity: 0.8"><i class="fa fa-2x fa-edit" style="vertical-align: baseline"></i> Edit</div>
-                <div class="hover-style" ng-if="editMode" ng-click="editModeToggle()" style="position: absolute;right: 15px;top:10px;opacity: 0.8"><i class="fa fa-2x fa-save" style="vertical-align: baseline"></i> Apply</div>
+                <div class="hover-style" ng-if="!editMode" ng-click="editModeToggle()" style="position: absolute;right: 15px;top:10px;opacity: 0.8"><i class="fa fa-2x fa-edit" style="vertical-align: baseline"></i> Edit mode</div>
+                <div class="hover-style" ng-if="editMode" ng-click="editModeToggle()" style="position: absolute;right: 15px;top:10px;opacity: 0.8"><i class="fa fa-2x fa-eye" style="vertical-align: baseline"></i> View mode</div>
             </div>
 
         </div>
@@ -194,7 +194,7 @@
                    <h4>Click on any field to edit</h4>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">OK, got it !</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK, got it !</button>
                 </div>
             </div>
         </div>
