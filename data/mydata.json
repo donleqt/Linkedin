@@ -2,6 +2,8 @@
   "personName" : "Don Le",
   "mainJob" : "Front-end Developer",
   "country" : "Vietnam",
+  "avatar" : "images/avatar.jpg",
+  "email" : "donleqt@gmail.com",
 
   "current" : "MimosaTek, IT STCD",
   "edu" : "University of Science",

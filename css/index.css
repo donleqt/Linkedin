@@ -120,6 +120,7 @@ body {
 .child-section {
     margin-top: 0px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .background-content {
@@ -194,4 +195,36 @@ ul.top-skill-board li{
 .hover-style {
     cursor: pointer;
     cursor: hand;
+    transition: background 0.2s;
+}
+.hover-style:hover {
+   background-color: rgba(0,0,0,0.1);
+}
+
+.add-icon {
+    color: #4CAF50;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-size: 22px;
+
+
+}
+
+.span-plus {
+    color: #000000;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+li i.fa, i.fa.fa-edit,i.fa.fa-remove {
+    font-size: 22px;
+    cursor: pointer;
+    cursor: hand;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+li i.fa:not(:first-child) {
+    /*padding-left: 10px;*/
+
 }
