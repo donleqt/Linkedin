@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Don Le CV</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" >
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" >
@@ -23,10 +25,12 @@
                         <h3>{{data.personName}}</h3>
                         <h4>{{data.mainJob}}</h4>
                         <h6 style="margin-bottom: 20px">{{data.country}}</h6>
-                        <h6>Current <span>{{data.current}}</span></h6>
+                        <h6>Current <span>{{data.current}} </span></h6>
                         <h6>Education <span>{{data.edu}}</span></h6>
-                        <a class="btn btn-info" style="margin-top: 20px" href="mail:donleqt@gmail.com">Email me</a>
+                        <a class="btn btn-info" style="margin-top: 15px" href="mail:donleqt@gmail.com">Email me</a>
                 </div>
+                <div class="hover-style" ng-if="!editMode" ng-click="editModeToggle()" style="position: absolute;right: 15px;top:10px;opacity: 0.8"><i class="fa fa-2x fa-edit" style="vertical-align: baseline"></i> Edit</div>
+                <div class="hover-style" ng-if="editMode" ng-click="editModeToggle()" style="position: absolute;right: 15px;top:10px;opacity: 0.8"><i class="fa fa-2x fa-save" style="vertical-align: baseline"></i> Apply</div>
             </div>
 
         </div>
@@ -131,10 +135,13 @@
        </div>
     </div>
     </div>
+
+
 </body>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
 
     <script src="js/app.js"></script>
 </html>

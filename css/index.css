@@ -1,3 +1,39 @@
+/*---------------------------*/
+/*typography*/
+/*---------------------------*/
+
+@font-face {
+    font-family: myFont;
+    src: url("../font/100.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family:myFont;
+    src: url("../font/normal.ttf") ;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url("../font/bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url("../font/Lato-Black.ttf");
+    font-weight: 900;
+}
+
+
+body {
+    font-family: myFont, sans-serif;
+    overflow: auto;
+
+}
+
+
 .less-color {
     color: #666;
 }
@@ -17,7 +53,7 @@ body {
     position: relative;
     vertical-align: top;
     display: inline-block;
-    padding: 20px 20px 20px 30px;
+    padding: 20px 20px 5px 30px;
 }
 
 .headline-info >h6 > span {
@@ -155,3 +191,7 @@ ul.top-skill-board li{
     color: #337ab7;
 }
 
+.hover-style {
+    cursor: pointer;
+    cursor: hand;
+}

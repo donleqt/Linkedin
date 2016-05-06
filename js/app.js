@@ -14,6 +14,17 @@
             $scope.data = res.data;
         }, function (err) {
             console.log(err.statusText);
-        })
+        });
+        $scope.editMode = false;
+        $scope.editModeToggle = function () {
+            $scope.editMode=$scope.editMode? false:true ;
+        };
+        $scope.editName=false;
+        $scope.enableEdit = function (event) {
+                console.log("ok, active edit",event.target);
+            var el=$(event.target);
+            console.log(el);
+            $scope.editName=$scope.editName? false:true ;
+        };
     });
 })(window.angular);
