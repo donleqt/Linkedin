@@ -3,18 +3,25 @@
  */
 (function (angular) {
     
-    var myApp = angular.module("myApp",[]);
+    var myApp = angular.module("myApp",['firebase']);
     
-    myApp.controller ("MainController",function ($scope,$http) {
+    myApp.controller ("MainController",function ($scope,$http,$firebaseObject,$firebaseAuth) {
         $scope.data= [];
+        // fire base
+        var ref =new Firebase("https://mycv01.firebaseio.com/");
+        // download the data into a local object
+        var syncObject = $firebaseObject(ref);
+        // synchronize the object with a three-way data binding
+        syncObject.$bindTo($scope, "data");
+        
         $scope.title = "Don Le";
         $scope.cloneData = {};
         // Get data from json file
-        $http.get("data/mydata.json").then(function (res) {
-            $scope.data = res.data;
-        }, function (err) {
-            console.log(err.statusText);
-        });
+        // $http.get("data/mydata.json").then(function (res) {
+        //     $scope.data = res.data;
+        // }, function (err) {
+        //     console.log(err.statusText);
+        // });
         $scope.editMode = false;
         $scope.editModeToggle = function () {
             $scope.editMode=$scope.editMode? false:true ;
