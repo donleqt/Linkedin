@@ -5,15 +5,79 @@
     
     var myApp = angular.module("myApp",['firebase']);
     
-    myApp.controller ("MainController",function ($scope,$http,$firebaseObject,$firebaseAuth) {
+    myApp.controller ("MainController",function ($scope,$http,$firebaseObject) {
+       $scope.mylog = '';
+       $scope.isLoggedIn =false;
+        $scope.loginData= {
+            email:'',
+            password:''
+        };
+
+        $scope.logout = function () {
+            if (ref.getAuth())
+            {
+                ref.unauth();
+                $scope.isLoggedIn =false;
+                window.location.reload();
+            }
+
+        };
         $scope.data= [];
-        // fire base
         var ref =new Firebase("https://mycv01.firebaseio.com/");
-        // download the data into a local object
-        var syncObject = $firebaseObject(ref);
-        // synchronize the object with a three-way data binding
-        syncObject.$bindTo($scope, "data");
-        
+        if (ref.getAuth())
+        {
+            $scope.isLoggedIn =true;
+            var syncObject = $firebaseObject(ref);
+            // synchronize the object with a three-way data binding
+            syncObject.$bindTo($scope, "data");
+
+        }
+        $scope.loadingFlag=false;
+        $scope.Login = function () {
+            $scope.mylog= '';
+            // fire base
+
+            $scope.loadingFlag=true;
+            ref.authWithPassword($scope.loginData, function(error, authData) {
+                if (error) {
+                    console.log("Login Failed!", error);
+                    $scope.mylog= error.toString();
+                    $scope.loadingFlag=false;
+                    console.log($scope.mylog);
+                    $scope.$apply();
+
+                } else {
+                    console.log("Authenticated successfully with payload:", authData);
+                    $scope.isLoggedIn=true;
+                    // download the data into a local object
+                    var syncObject = $firebaseObject(ref);
+                    // synchronize the object with a three-way data binding
+                    syncObject.$bindTo($scope, "data");
+                    $scope.loadingFlag=false;
+                    $scope.$apply();
+                }
+            });
+        };
+
+        $scope.Register = function () {
+            $scope.mylog= '';
+            $scope.loadingFlag=true;
+            ref.createUser($scope.loginData, function(error, userData) {
+                if (error) {
+                    console.log("Error creating user:", error);
+                    $scope.mylog= error.toString();
+
+                    $scope.loadingFlag=false;
+                    $scope.$apply();
+                } else {
+                    console.log("Successfully created user account with uid:", userData);
+                    $scope.mylog= 'Successfully created user !'
+                    $scope.loggin = true;
+                    $scope.loadingFlag=false;
+                    $scope.$apply();
+                }
+            });
+        };
         $scope.title = "Don Le";
         $scope.cloneData = {};
         // Get data from json file
